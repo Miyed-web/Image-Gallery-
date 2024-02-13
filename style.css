@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #000;
+}
+.container{
+  position: relative;
+  display: grid;
+  width: 600px;
+  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px 200px;
+  grid-template-areas: 
+  "img1 img3 img3" 
+  "img1 img6 img5"
+  "img4 img4 img5"
+  "img7 img7 img7";
+}
+.container .item{
+  position: relative;
+  border-radius: 5px;
+}
+.container .item img{
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.container:hover .item img:not(:hover){
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: .4s;
+}
+.container .img1{
+  grid-area: img1;
+}
+.container .img2{
+  grid-area: img2;
+}
+.container .img3{
+  grid-area: img3;
+}
+.container .img4{
+  grid-area: img4;
+}
+.container .img5{
+  grid-area: img5;
+}
+.container .img6{
+  grid-area: img6;
+}
+.container .img7{
+  grid-area: img7;
+}
